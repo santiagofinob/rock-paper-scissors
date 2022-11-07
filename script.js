@@ -50,11 +50,13 @@ function playRound(playerSelection, computerSelection){
     }
     
 }
-const playerSelection = "RocK"
-const computerSelection = getComputerChoice()
-console.log(playerSelection.toLowerCase()===computerSelection)
-    console.log(playerSelection)
-    console.log(computerSelection)
+function game() {
+    for (let i = 0; i < 5; i++) {
+    const playerSelection=prompt("Rock, paper or scissors?")
+    const computerSelection = getComputerChoice()
     console.log(playRound(playerSelection, computerSelection))
-    console.log(playerScore)
-    console.log(computerScore)
+    const score = `Your score: ${playerScore} Computer score: ${computerScore}`
+    console.log(score)
+    }
+}
+game()
